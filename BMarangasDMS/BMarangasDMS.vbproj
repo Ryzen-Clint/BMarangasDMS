@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9CFDB84-EEA0-4E17-8DDA-0DA83C50ABDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BMarangasDMS.My.MyApplication</StartupObject>
+    <RootNamespace>BMarangasDMS</RootNamespace>
+    <AssemblyName>BMarangasDMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BMarangasDMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BMarangasDMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.28.3.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.28.3\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.1.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.1\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.8.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="ZstdSharp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.1\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm.Designer.vb">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk01-Animaltransfrm.Designer.vb">
+      <DependentUpon>Clerk01-Animaltransfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk01-Animaltransfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk01-BGYclearance.Designer.vb">
+      <DependentUpon>Clerk01-BGYclearance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk01-BGYclearance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk01-Cedulafrm.Designer.vb">
+      <DependentUpon>Clerk01-Cedulafrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk01-Cedulafrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk01-IDcardfrm.Designer.vb">
+      <DependentUpon>Clerk01-IDcardfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk01-IDcardfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk01-Indigencyfrm.Designer.vb">
+      <DependentUpon>Clerk01-Indigencyfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk01-Indigencyfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk01-Jobseekfrm.Designer.vb">
+      <DependentUpon>Clerk01-Jobseekfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk01-Jobseekfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk01-Microfrm.Designer.vb">
+      <DependentUpon>Clerk01-Microfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk01-Microfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk01-residencyfrm.Designer.vb">
+      <DependentUpon>Clerk01-residencyfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk01-residencyfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk01frm.Designer.vb">
+      <DependentUpon>Clerk01frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk01frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk02frm.Designer.vb">
+      <DependentUpon>Clerk02frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk02frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk03frm.Designer.vb">
+      <DependentUpon>Clerk03frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk03frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clerk04frm.Designer.vb">
+      <DependentUpon>Clerk04frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk04frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.vb">
+      <DependentUpon>dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loginasadmin.Designer.vb">
+      <DependentUpon>Loginasadmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loginasadmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Secretaryfrm.Designer.vb">
+      <DependentUpon>Secretaryfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Secretaryfrm.vb" />
+    <Compile Include="UnderMaintenance.Designer.vb">
+      <DependentUpon>UnderMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UnderMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRegisterFrm.Designer.vb">
+      <DependentUpon>UserRegisterFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegisterFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk01-Animaltransfrm.resx">
+      <DependentUpon>Clerk01-Animaltransfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk01-BGYclearance.resx">
+      <DependentUpon>Clerk01-BGYclearance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk01-Cedulafrm.resx">
+      <DependentUpon>Clerk01-Cedulafrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk01-IDcardfrm.resx">
+      <DependentUpon>Clerk01-IDcardfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk01-Indigencyfrm.resx">
+      <DependentUpon>Clerk01-Indigencyfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk01-Jobseekfrm.resx">
+      <DependentUpon>Clerk01-Jobseekfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk01-Microfrm.resx">
+      <DependentUpon>Clerk01-Microfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk01-residencyfrm.resx">
+      <DependentUpon>Clerk01-residencyfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk01frm.resx">
+      <DependentUpon>Clerk01frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk02frm.resx">
+      <DependentUpon>Clerk02frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk03frm.resx">
+      <DependentUpon>Clerk03frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clerk04frm.resx">
+      <DependentUpon>Clerk04frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard.resx">
+      <DependentUpon>dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loginasadmin.resx">
+      <DependentUpon>Loginasadmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretaryfrm.resx">
+      <DependentUpon>Secretaryfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnderMaintenance.resx">
+      <DependentUpon>UnderMaintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRegisterFrm.resx">
+      <DependentUpon>UserRegisterFrm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adduser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adduser2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adduser3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UM3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\training.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminlock2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminlock3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminlock4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminlock5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adduser1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deluser2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_max.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_max2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indigency.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearance.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
